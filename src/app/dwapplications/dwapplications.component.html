@@ -1,6 +1,6 @@
-<p>
-  Data Integrity <br/>
-  QMR <br/>
-  ALM <br/>
-  DI HeadStart <br/>
-</p>
+<h3> Service Property : {{compProp}} </h3> 
+<button (click)='GetUsers()'> Get Usres </button>
+<h3>Users Data</h3>
+<ul>
+   <li *ngFor="let item of users;">{{item.name}}</li>
+</ul>

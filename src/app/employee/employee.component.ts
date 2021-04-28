@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import {MyServiceService} from './../my-service.service';
+
 @Component({
   selector: 'app-employee',
   templateUrl: './employee.component.html',
@@ -7,9 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeeComponent implements OnInit {
 
-  constructor() { }
-
+  compProp = 'This is Employee comp property';
+  constructor(private mysvc: MyServiceService) {}
   ngOnInit() {
+    this.compProp = this.mysvc.serviceProp;
   }
 
 }

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
+
 import { EmployeeComponent } from './employee/employee.component';
 import { DWApplicationsComponent } from './dwapplications/dwapplications.component';
 
@@ -19,3 +21,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+export const RoutingComponent = [EmployeeComponent, DWApplicationsComponent];
